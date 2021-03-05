@@ -54,7 +54,7 @@
 <script>
 import Benefit from "../components/Benefit";
 import Feature from "../components/Feature";
-import Case from "../components/Case"
+import Case from "../components/Case";
 export default {
   name: "Home",
   components: {
@@ -74,7 +74,8 @@ export default {
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
         ],
-        image: "https://media.webfleet.com/f_auto,c_pad,q_auto,w_518,dpr_2.0/media/img/photos/products/bundles/wfdesktop-mobile-link210-all.png"
+        image:
+          "https://media.webfleet.com/f_auto,c_pad,q_auto,w_518,dpr_2.0/media/img/photos/products/bundles/wfdesktop-mobile-link210-all.png"
       }
     };
   }
@@ -90,7 +91,11 @@ export default {
 
 .main-background {
   width: 100%;
-  background-image: linear-gradient(rgba(255,255,255, .85), rgba(255,255,255, .85)), url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdtlhWuhgJsJ0qBdvop9612WKJ4NMQC1VrbA&usqp=CAU');
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.85),
+      rgba(255, 255, 255, 0.85)
+    ),
+    url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdtlhWuhgJsJ0qBdvop9612WKJ4NMQC1VrbA&usqp=CAU");
   background-repeat: no-repeat;
   background-size: cover;
   border: 1px solid red;
@@ -101,7 +106,7 @@ export default {
     .main-info-wrapper {
       .main-title {
         font-size: 28px;
-        font-weight:900;
+        font-weight: 900;
         color: $font_color;
       }
       .main-description {
@@ -132,5 +137,14 @@ export default {
 .benefit-title {
   font-weight: 900;
   color: $font_color;
+}
+
+.feature-background {
+  background-color: #f1f2f3;
+  .feature-title {
+    font-weight: 900;
+    color: $font_color;
+    text-align: center;
+  }
 }
 </style>
