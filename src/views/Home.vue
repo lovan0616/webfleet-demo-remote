@@ -37,8 +37,8 @@
     </section>
 
     <section id="testimonial-section">
-      <div class="testimonial background">
-        <h2 class="case-title">What our customers say</h2>
+      <div class="testimonial-background">
+        <h2 class="testimonial-title">What our customers say</h2>
         <Case />
       </div>
     </section>
@@ -144,6 +144,15 @@ export default {
   .feature-title {
     font-weight: 900;
     color: $font_color;
+    text-align: center;
+  }
+}
+
+.testimonial-background {
+  background-color: $font_color;
+  .testimonial-title {
+    font-weight: 900;
+    color: #ffffff;
     text-align: center;
   }
 }
