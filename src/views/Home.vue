@@ -4,7 +4,7 @@
 
     <section id="main-section">
       <div class="main-background">
-        <div class="container d-flex flex-column">
+        <div class="cus-container d-flex flex-column">
           <div class="main-info-wrapper">
             <h2 class="main-title mt-4">{{ main.title }}</h2>
             <div class="main-description">
@@ -23,7 +23,7 @@
     </section>
 
     <section id="benefit-section">
-      <div class="container">
+      <div class="cus-container">
         <h2 class="benefit-title">WEBFLEET helps you</h2>
         <Benefit />
       </div>
@@ -82,17 +82,22 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.cus-container {
+  width: 95%;
+  border: 1px solid goldenrod;
+  margin: 15px auto;
+}
+
 .main-background {
   width: 100%;
   background-image: linear-gradient(rgba(255,255,255, .85), rgba(255,255,255, .85)), url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdtlhWuhgJsJ0qBdvop9612WKJ4NMQC1VrbA&usqp=CAU');
   background-repeat: no-repeat;
   background-size: cover;
   border: 1px solid red;
-  .container {
+  .cus-container {
     z-index: 10;
     width: 100%;
     padding: 5px 10px;
-    border: 1px solid goldenrod;
     .main-info-wrapper {
       .main-title {
         font-size: 28px;
@@ -111,7 +116,7 @@ export default {
       width: 80%;
       img {
         width: 100%;
-        object-fit: cover;
+        object-fit: contain;
       }
     }
     .trial-btn {
@@ -122,5 +127,10 @@ export default {
       background-color: $theme_color;
     }
   }
+}
+
+.benefit-title {
+  font-weight: 900;
+  color: $font_color;
 }
 </style>
