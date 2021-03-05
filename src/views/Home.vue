@@ -4,17 +4,17 @@
 
     <section id="main-section">
       <div class="main-background">
-        <div class="container">
+        <div class="container d-flex flex-column">
           <div class="main-info-wrapper">
-            <h2 class="main-title">{{ main.title }}</h2>
+            <h2 class="main-title mt-4">{{ main.title }}</h2>
             <div class="main-description">
-              <p>{{ main.description }}</p>
+              <p class="my-3">{{ main.description }}</p>
               <ol>
-                <li v-for="(item, index) in main.list" :key="index">{{ item }}</li>
+                <li v-for="(item, index) in main.list" :key="index" class="my-1">{{ item }}</li>
               </ol>
             </div>
           </div>
-          <div class="main-image-wrapper">
+          <div class="main-image-wrapper mx-auto my-3">
             <img :src="main.image" />
           </div>
           <button class="trial-btn">Try it for free</button>
@@ -74,9 +74,53 @@ export default {
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
         ],
-        image: "https://picsum.photos/1200/628"
+        image: "https://media.webfleet.com/f_auto,c_pad,q_auto,w_518,dpr_2.0/media/img/photos/products/bundles/wfdesktop-mobile-link210-all.png"
       }
     };
   }
 };
 </script>
+
+<style lang="scss" scoped>
+.main-background {
+  width: 100%;
+  background-image: linear-gradient(rgba(255,255,255, .85), rgba(255,255,255, .85)), url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdtlhWuhgJsJ0qBdvop9612WKJ4NMQC1VrbA&usqp=CAU');
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 1px solid red;
+  .container {
+    z-index: 10;
+    width: 100%;
+    padding: 5px 10px;
+    border: 1px solid goldenrod;
+    .main-info-wrapper {
+      .main-title {
+        font-size: 28px;
+        font-weight:900;
+        color: $font_color;
+      }
+      .main-description {
+        color: $font_color;
+        li::before {
+          content: "\2714";
+          color: $theme_color;
+        }
+      }
+    }
+    .main-image-wrapper {
+      width: 80%;
+      img {
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+    .trial-btn {
+      width: 60%;
+      padding: 20px;
+      border-radius: 30px;
+      border: none;
+      background-color: $theme_color;
+    }
+  }
+}
+</style>
