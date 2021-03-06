@@ -114,7 +114,7 @@ export default {
         text-align: center;
         border: 1px solid #a2aaaf;
         color: #ffffff;
-        padding: 10px 15px;
+        padding: 15px 15px;
         border-radius: 30px;
       }
     }
@@ -148,7 +148,8 @@ export default {
         font-size: 9px;
       }
       .read-more-btn {
-        width: 60%;
+        width: 75%;
+        max-width: 204px;
         text-align: center;
         border: 1px solid #a2aaaf;
         color: #ffffff;

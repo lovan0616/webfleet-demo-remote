@@ -43,6 +43,10 @@
       </div>
     </section>
 
+    <section id="form-section">
+      <Form />
+    </section>
+
     <section id="banner-section"></section>
 
     <section id="sns-section"></section>
@@ -55,12 +59,14 @@
 import Benefit from "../components/Benefit";
 import Feature from "../components/Feature";
 import Case from "../components/Case";
+import Form from "../components/Form";
 export default {
   name: "Home",
   components: {
     Benefit,
     Feature,
-    Case
+    Case,
+    Form
   },
   data() {
     return {
@@ -154,6 +160,22 @@ export default {
     font-weight: 900;
     color: #ffffff;
     text-align: center;
+  }
+}
+
+.benefit-title,
+.feature-title,
+.testimonial-title {
+  padding: 21px;
+  font-size: 4vw;
+}
+
+@media (min-width: 576px), print {
+  .benefit-title,
+  .feature-title,
+  .testimonial-title {
+    padding: 42px;
+    font-size: 4vw;
   }
 }
 </style>
