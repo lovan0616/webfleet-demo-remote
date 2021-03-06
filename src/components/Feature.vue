@@ -1,6 +1,6 @@
 <template>
   <div class="feature">
-    <div class="feature-wrapper">
+    <div class="cus-container">
       <div class="row">
         <div class="one-col col-12 pb-4" v-for="(feature, index) in features" :key="index">
           <div class="feature-image-wrapper">

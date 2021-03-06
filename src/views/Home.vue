@@ -4,20 +4,30 @@
 
     <section id="main-section">
       <div class="main-background">
-        <div class="cus-container d-flex flex-column">
-          <div class="main-info-wrapper">
-            <h2 class="main-title mt-4">{{ main.title }}</h2>
-            <div class="main-description">
-              <p class="my-3">{{ main.description }}</p>
-              <ol>
-                <li v-for="(item, index) in main.list" :key="index" class="my-1">{{ item }}</li>
-              </ol>
+        <div class="cus-container d-flex py-5">
+          <div class="left-content">
+            <div class="main-info-wrapper">
+              <h2 class="main-title">
+                INSTALL YOURSELF AND TRY WEBFLEET FOR
+                <span class="text-highlight">FREE</span>
+              </h2>
+              <div class="main-description">
+                <p
+                  class="my-3"
+                >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sodales venenatis urna eu pulvinar. Nulla sit amet rutrum tellus.</p>
+                <ol>
+                  <li v-for="(item, index) in main.list" :key="index" class="my-1">{{ item }}</li>
+                </ol>
+              </div>
             </div>
+            <div class="main-image-wrapper mx-auto my-3">
+              <img :src="main.image" />
+            </div>
+            <button class="trial-btn">Try it for free</button>
           </div>
-          <div class="main-image-wrapper mx-auto my-3">
-            <img :src="main.image" />
+          <div class="form-wrapper d-none d-sm-block ml-3">
+            <Form />
           </div>
-          <button class="trial-btn">Try it for free</button>
         </div>
       </div>
     </section>
@@ -44,10 +54,9 @@
     </section>
 
     <section id="form-section">
-      <Form />
+      <Form class="d-sm-none" />
+      <FormAnchor class="d-none d-sm-block" />
     </section>
-
-    <section id="banner-section"></section>
 
     <section id="sns-section"></section>
 
@@ -60,20 +69,19 @@ import Benefit from "../components/Benefit";
 import Feature from "../components/Feature";
 import Case from "../components/Case";
 import Form from "../components/Form";
+import FormAnchor from "../components/FormAnchor"
 export default {
   name: "Home",
   components: {
     Benefit,
     Feature,
     Case,
-    Form
+    Form,
+    FormAnchor
   },
   data() {
     return {
       main: {
-        title: "INSTALL YOURSELF AND TRY WEBFLEET FOR FREE",
-        description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sodales venenatis urna eu pulvinar. Nulla sit amet rutrum tellus.",
         list: [
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
@@ -89,12 +97,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.cus-container {
-  width: 95%;
-  border: 1px solid goldenrod;
-  margin: 15px auto;
-}
-
 .main-background {
   width: 100%;
   background-image: linear-gradient(
@@ -106,14 +108,14 @@ export default {
   background-size: cover;
   border: 1px solid red;
   .cus-container {
-    z-index: 10;
-    width: 100%;
-    padding: 5px 10px;
     .main-info-wrapper {
       .main-title {
         font-size: 28px;
         font-weight: 900;
         color: $font_color;
+        .text-highlight {
+          color: $theme_color;
+        }
       }
       .main-description {
         color: $font_color;
@@ -131,11 +133,7 @@ export default {
       }
     }
     .trial-btn {
-      width: 60%;
-      padding: 20px;
-      border-radius: 30px;
-      border: none;
-      background-color: $theme_color;
+      @include btnStyle(60%)
     }
   }
 }
