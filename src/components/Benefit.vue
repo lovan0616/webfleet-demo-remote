@@ -77,7 +77,6 @@ export default {
   align-items: center;
   font-size: 0.8rem;
   justify-content: space-around;
-  border: 1px solid green;
   .benefit-icon-wrapper {
     width: 10vw;
     height: 10vw;
@@ -94,9 +93,11 @@ export default {
     color: #6a7780;
   }
   p {
-    border: 1px solid blue;
     display: block;
     height: auto;
+    line-height: 1.5rem;
+    color: $font_color;
+    font-weight: 500;
     width: calc(100% - 100px);
   }
 }

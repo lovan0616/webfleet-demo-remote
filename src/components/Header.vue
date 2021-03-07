@@ -37,6 +37,29 @@
             </ul>
           </div>
         </li>
+        <li class="nav2-item py-3">
+          <p class="title">Individual recomendation</p>
+          <div class="nav2-item-wrapper">
+            <div class="icon-wrapper">
+              <font-awesome-icon :icon="['fas' , 'phone' ]" />
+            </div>
+            <router-link to="/">Solution Advisor</router-link>
+          </div>
+          <div class="nav2-item-wrapper">
+            <div class="icon-wrapper">
+              <font-awesome-icon :icon="['fas' , 'phone' ]" />
+            </div>
+            <router-link to="/">Savings Calculator</router-link>
+          </div>
+        </li>
+        <li class="nav3-item">
+          <div class="nav3-item-wrapper">
+            <router-link to="/">Partners</router-link>
+            <router-link to="/">Ablut</router-link>
+            <router-link to="/">Blog</router-link>
+            <router-link to="/">Contact</router-link>
+          </div>
+        </li>
       </ul>
     </nav>
 
@@ -207,10 +230,8 @@ export default {
       height: 100%;
       display: grid;
       grid-auto-flow: row;
-      grid-gap: 20px;
-      padding-top: 20px;
-      padding-bottom: 20px;
       .nav-item {
+        padding-top: 30px;
         .navitem-toggle {
           visibility: hidden;
           position: absolute;
@@ -251,7 +272,6 @@ export default {
             grid-gap: 20px;
             padding-top: 20px;
             padding-bottom: 20px;
-            border: 1px solid wheat;
             color: #ffffff;
             .nav-link {
               text-decoration: none;
@@ -263,6 +283,54 @@ export default {
                 margin-right: 20px;
               }
             }
+          }
+        }
+      }
+      .nav2-item {
+        margin-top: 30px;
+        padding-left: 20px;
+        display: grid;
+        grid-gap: 10px;
+        background-color: #616e78;
+        .title {
+          display: none;
+        }
+        .nav2-item-wrapper {
+          display: flex;
+          align-items: center;
+          color: #ffffff;
+          .icon-wrapper {
+            width: 47px;
+            height: 47px;
+            border-radius: 50%;
+            border: 1px solid #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #ffffff;
+            margin-right: 10px;
+          }
+          a {
+            text-decoration: none;
+            color: inherit;
+          }
+        }
+      }
+
+      .nav3-item {
+        padding-left: 20px;
+        background-color: #748088;
+        .nav3-item-wrapper {
+          padding-top: 30px;
+          padding-bottom: 30px;
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          grid-template-rows: auto;
+          grid-gap: 20px;
+          color: #ffffff;
+          a {
+            text-decoration: none;
+            color: inherit;
           }
         }
       }
@@ -295,6 +363,7 @@ export default {
 @media (min-width: 1024px), print {
   .header {
     display: flex;
+    border-bottom: 1px solid #d0d4d7;
     .navbar-brand {
       width: 260px;
       padding-left: 20px;
@@ -310,6 +379,8 @@ export default {
         grid-auto-flow: column;
         padding: 0px;
         .nav-item {
+          padding-top: 0px;
+          margin-right: 30px;
           display: flex;
           align-items: center;
           height: 100%;
@@ -355,9 +426,17 @@ export default {
             text-transform: uppercase;
             font-size: 13px;
           }
+
+          .nav-link-wrapper {
+            display: none;
+          }
         }
 
-        .nav-link-wrapper {
+        .nav2-item {
+          display: none;
+        }
+
+        .nav3-item {
           display: none;
         }
       }

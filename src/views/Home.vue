@@ -85,7 +85,7 @@ import Form from "../components/Form";
 import FormAnchor from "../components/FormAnchor";
 import Header from "../components/Header";
 import SNS from "../components/SNS";
-import Footer from "../components/Footer"
+import Footer from "../components/Footer";
 export default {
   name: "Home",
   components: {
@@ -141,7 +141,6 @@ export default {
     url("https://pwbgis.kcg.gov.tw/construction/Images/24_00-1.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  border: 1px solid red;
   .cus-container {
     .main-info-wrapper {
       .main-title {
@@ -153,10 +152,15 @@ export default {
         }
       }
       .main-description {
+        font-size: 1.5rem;
+        line-height: 2rem;
         color: $font_color;
-        li::before {
-          content: "\2714";
-          color: $theme_color;
+        li {
+          font-size: 1.3rem;
+          &::before {
+            content: "\2714";
+            color: $theme_color;
+          }
         }
       }
     }
@@ -168,20 +172,18 @@ export default {
       }
     }
     .trial-btn {
-      @include btnStyle(60%,20px, 30px);
+      @include btnStyle(60%, 20px, 30px);
     }
   }
 }
 
 .benefit-title {
-  font-weight: 900;
   color: $font_color;
 }
 
 .feature-background {
   background-color: #f1f2f3;
   .feature-title {
-    font-weight: 900;
     color: $font_color;
     text-align: center;
   }
@@ -190,7 +192,6 @@ export default {
 .testimonial-background {
   background-color: $font_color;
   .testimonial-title {
-    font-weight: 900;
     color: #ffffff;
     text-align: center;
   }
@@ -200,7 +201,8 @@ export default {
 .feature-title,
 .testimonial-title {
   padding: 21px;
-  font-size: 4vw;
+  font-size: #{"min(4vw, 64px)"};
+  font-weight: 800;
 }
 
 @media (min-width: 576px), print {
@@ -212,14 +214,6 @@ export default {
         rgba(255, 255, 255, 0)
       ),
       url("https://pwbgis.kcg.gov.tw/construction/Images/24_00-1.jpg");
-  }
-
-  .benefit-title,
-  .feature-title,
-  .testimonial-title {
-    padding: 42px;
-    font-size: 4vw;
-    text-align: center;
   }
 }
 </style>

@@ -72,7 +72,6 @@ export default {
 
 <style lang="scss" scoped>
 .one-col {
-  border: 1px solid slateblue;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -86,13 +85,14 @@ export default {
   .feauture-content {
     padding: 15px 15px 35px 15px;
     .title {
-      font-weight: 900;
+      font-weight: 800;
+      font-size: 1.2rem;
       color: $font_color;
       margin-bottom: 15px;
     }
     .description {
       color: $font_color;
-
+      line-height: 1.6rem;
     }
   }
 }
