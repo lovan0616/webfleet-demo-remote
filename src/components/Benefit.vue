@@ -13,69 +13,79 @@
 
 <script>
 export default {
-  name: 'Benefit',
+  name: "Benefit",
   data() {
     return {
       benefits: [
         {
           icon: {
-            type: 'fas',
-            name: 'car'
+            type: "fas",
+            name: "car"
           },
-          description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sodales venenatis urna eu pulvinar. Nulla sit amet rutrum tellus.'
+          description:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sodales venenatis urna eu pulvinar. Nulla sit amet rutrum tellus."
         },
         {
           icon: {
-            type: 'fas',
-            name: 'car'
+            type: "fas",
+            name: "car"
           },
-          description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sodales venenatis urna eu pulvinar. Nulla sit amet rutrum tellus.'
+          description:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sodales venenatis urna eu pulvinar. Nulla sit amet rutrum tellus."
         },
         {
           icon: {
-            type: 'fas',
-            name: 'car'
+            type: "fas",
+            name: "car"
           },
-          description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sodales venenatis urna eu.'
+          description:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sodales venenatis urna eu."
         },
         {
           icon: {
-            type: 'fas',
-            name: 'car'
+            type: "fas",
+            name: "car"
           },
-          description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sodales venenatis urna eu pulvinar. Nulla sit amet rutrum tellus.'
+          description:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sodales venenatis urna eu pulvinar. Nulla sit amet rutrum tellus."
         },
         {
           icon: {
-            type: 'fas',
-            name: 'car'
+            type: "fas",
+            name: "car"
           },
-          description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sodales venenatis urna.'
+          description:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sodales venenatis urna."
         },
         {
           icon: {
-            type: 'fas',
-            name: 'car'
+            type: "fas",
+            name: "car"
           },
-          description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sodales venenatis urna eu pulvinar. Nulla sit amet rutrum tellus.'
-        },
+          description:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sodales venenatis urna eu pulvinar. Nulla sit amet rutrum tellus."
+        }
       ]
-    }
+    };
   }
-}
+};
 </script>
 
 <style lang="scss" scoped>
 .one-col {
   display: flex;
   align-items: center;
-  font-size: .8rem;
+  font-size: 0.8rem;
   justify-content: space-around;
   border: 1px solid green;
   .benefit-icon-wrapper {
-    width: 45px;
-    height: 45px;
-    border: 1px solid $light_color;
+    width: 10vw;
+    height: 10vw;
+    min-width: 67px;
+    max-width: 76px;
+    min-height: 67px;
+    max-height: 76px;
+    border: 2px solid #d9dddf;
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -87,7 +97,7 @@ export default {
     border: 1px solid blue;
     display: block;
     height: auto;
-    width: calc(100% - 100px)
+    width: calc(100% - 100px);
   }
 }
 
@@ -96,9 +106,12 @@ export default {
     flex-direction: column;
     justify-content: flex-start;
     p {
-      width: 100%;
-      margin-top: 10px ;
+      width: 80%;
+      margin-top: 10px;
       text-align: center;
+    }
+    .benefit-icon-wrapper {
+      font-size: 2.5rem;
     }
   }
 }

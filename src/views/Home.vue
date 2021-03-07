@@ -1,7 +1,9 @@
 <template>
   <div class="home">
-    <section id="hedaer-section"></section>
-
+    <header id="hedaer-section">
+      <Header />
+    </header>
+    
     <section id="main-section">
       <div class="main-background">
         <div class="cus-container d-flex py-5">
@@ -70,6 +72,7 @@ import Feature from "../components/Feature";
 import Case from "../components/Case";
 import Form from "../components/Form";
 import FormAnchor from "../components/FormAnchor"
+import Header from "../components/Header"
 export default {
   name: "Home",
   components: {
@@ -77,7 +80,8 @@ export default {
     Feature,
     Case,
     Form,
-    FormAnchor
+    FormAnchor,
+    Header
   },
   data() {
     return {
@@ -101,16 +105,16 @@ export default {
   width: 100%;
   background-image: linear-gradient(
       rgba(255, 255, 255, 0.85),
-      rgba(255, 255, 255, 0.85)
+      rgba(255, 255, 255, 0.85),
     ),
-    url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdtlhWuhgJsJ0qBdvop9612WKJ4NMQC1VrbA&usqp=CAU");
+    url("https://pwbgis.kcg.gov.tw/construction/Images/24_00-1.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   border: 1px solid red;
   .cus-container {
     .main-info-wrapper {
       .main-title {
-        font-size: 28px;
+        font-size: #{"max(4vw, 32px)"};
         font-weight: 900;
         color: $font_color;
         .text-highlight {
@@ -169,11 +173,20 @@ export default {
 }
 
 @media (min-width: 576px), print {
+  .main-background {
+    background-image: linear-gradient(to right,
+      rgba(255, 255, 255, 1),
+      rgba(255, 255, 255, 0.95),
+      rgba(255, 255, 255, 0)
+    ), url("https://pwbgis.kcg.gov.tw/construction/Images/24_00-1.jpg");
+  }
+
   .benefit-title,
   .feature-title,
   .testimonial-title {
     padding: 42px;
     font-size: 4vw;
+    text-align: center;
   }
 }
 </style>

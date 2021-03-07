@@ -2,8 +2,8 @@
   <div class="form" id="trial-form">
     <form>
       <h2 class="title">
-        Request 3 months
-        <span class="text-highlight">FREE</span> trial
+        REQUEST 3 MONTHS
+        <span class="text-highlight">FREE</span> TRIAL
       </h2>
       <div class="form-group">
         <input type="text" class="form-control" id="firstName" required />
