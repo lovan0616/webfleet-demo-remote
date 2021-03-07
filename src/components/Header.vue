@@ -12,7 +12,8 @@
     <nav class="nav">
       <ul class="nav-list">
         <li class="nav-item" v-for="item in navItem" :key="item.name">
-          <input type="checkbox" class="navitem-toggle" :id="item.name" />
+          <input type="radio" name="nav-item" class="navitem-toggle" :id="item.name" v-if="isWideViewport()" />
+          <input type="checkbox" class="navitem-toggle" :id="item.name" v-else />
           <label :for="item.name" class="navitem-toggle-label">
             <span class="item-name">{{ item.name }}</span>
             <span class="back">Back</span>
@@ -46,6 +47,7 @@ export default {
   name: "Header",
   data() {
     return {
+      viewPort: window.innerWidth,
       navItem: [
         {
           name: "Products",
@@ -72,16 +74,11 @@ export default {
             "sit amet adipiscig",
             "Lorem sit amet",
             "Lorem ipsum dolor",
-            "dolor sit amet",
-            "sit amet adipiscig",
-            "Lorem sit amet"
           ]
         },
         {
           name: "App Center",
           contents: [
-            "Lorem ipsum dolor",
-            "dolor sit amet",
             "sit amet adipiscig",
             "Lorem sit amet",
             "Lorem ipsum dolor",
@@ -92,6 +89,17 @@ export default {
         }
       ]
     };
+  },
+  methods: {
+    isWideViewport() {
+      this.viewPort = window.innerWidth
+      const isWideViewport = this.viewPort >= 1024
+      console.log(isWideViewport)
+      return isWideViewport
+    }
+  },
+  created() {
+    window.addEventListener("resize", this.isWideViewport)
   }
 };
 </script>
@@ -265,6 +273,68 @@ export default {
       text-align: center;
       line-height: 40px;
       transform: scaleX(-1);
+    }
+  }
+}
+
+@media (min-width: 1024px), print {
+  .header {
+    display: flex;
+    .navbar-brand {
+      width: 260px;
+      padding-left: 20px;
+    }
+
+    .navbar-toggle-label {
+      display: none;
+    }
+    .nav {
+      all: unset;
+      .nav-list {
+        display: flex;
+        .nav-item {
+          display: flex;
+          align-items: center;
+          .navitem-toggle {
+            display: inline;
+ 
+            &:checked ~ .navitem-toggle-label {
+              .back {
+                display: none;
+              }
+              .item-name {
+                display: inline;
+              }
+            }
+            &:checked ~ .nav-link-wrapper {
+              position: absolute;
+              left: 0;
+              top: 100%;
+              width: 100%;
+              background-color: $nav_color;
+              .nav-link {
+                color: $font_color;
+                &::before {
+                  display: none;
+                }
+              }
+            }
+          }
+          
+          .navitem-toggle-label {
+            &::before {
+              display: none;
+            }
+            color: $font_color;
+            text-transform: uppercase;
+            font-size: 13px;
+          }
+        }
+
+        .nav-link-wrapper {
+          display: none;
+        }
+      }
     }
   }
 }
