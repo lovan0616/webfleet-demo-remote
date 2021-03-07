@@ -82,9 +82,9 @@ export default {
     width: 10vw;
     height: 10vw;
     min-width: 67px;
-    max-width: 76px;
+    max-width: 92px;
     min-height: 67px;
-    max-height: 76px;
+    max-height: 92px;
     border: 2px solid #d9dddf;
     border-radius: 50%;
     display: flex;

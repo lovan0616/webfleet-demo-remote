@@ -12,7 +12,13 @@
     <nav class="nav">
       <ul class="nav-list">
         <li class="nav-item" v-for="item in navItem" :key="item.name">
-          <input type="radio" name="nav-item" class="navitem-toggle" :id="item.name" v-if="isWideViewport()" />
+          <input
+            type="radio"
+            name="nav-item"
+            class="navitem-toggle"
+            :id="item.name"
+            v-if="isWideViewport()"
+          />
           <input type="checkbox" class="navitem-toggle" :id="item.name" v-else />
           <label :for="item.name" class="navitem-toggle-label">
             <span class="item-name">{{ item.name }}</span>
@@ -37,6 +43,13 @@
     <div class="contact-us">
       <div class="icon-wrapper">
         <font-awesome-icon :icon="['fas' , 'phone' ]" />
+      </div>
+      <div class="number-wrapper d-flex">
+        <div class="d-flex flex-column align-items-end">
+          <p>Call Sales</p>
+          <p>0208 822 305</p>
+        </div>
+        <button class="ml-3 contact-btn">Contact us</button>
       </div>
     </div>
   </div>
@@ -73,7 +86,7 @@ export default {
             "dolor sit amet",
             "sit amet adipiscig",
             "Lorem sit amet",
-            "Lorem ipsum dolor",
+            "Lorem ipsum dolor"
           ]
         },
         {
@@ -92,14 +105,14 @@ export default {
   },
   methods: {
     isWideViewport() {
-      this.viewPort = window.innerWidth
-      const isWideViewport = this.viewPort >= 1024
-      console.log(isWideViewport)
-      return isWideViewport
+      this.viewPort = window.innerWidth;
+      const isWideViewport = this.viewPort >= 1024;
+      console.log(isWideViewport);
+      return isWideViewport;
     }
   },
   created() {
-    window.addEventListener("resize", this.isWideViewport)
+    window.addEventListener("resize", this.isWideViewport);
   }
 };
 </script>
@@ -198,7 +211,6 @@ export default {
       padding-top: 20px;
       padding-bottom: 20px;
       .nav-item {
-        border: 1px solid salmon;
         .navitem-toggle {
           visibility: hidden;
           position: absolute;
@@ -291,14 +303,19 @@ export default {
     .nav {
       all: unset;
       .nav-list {
-        display: flex;
+        display: grid;
+        grid-auto-flow: column;
+        padding: 0px;
         .nav-item {
           display: flex;
           align-items: center;
+          height: 100%;
+
           .navitem-toggle {
             display: inline;
- 
+
             &:checked ~ .navitem-toggle-label {
+              border-bottom: 3px solid $theme_color;
               .back {
                 display: none;
               }
@@ -320,8 +337,14 @@ export default {
               }
             }
           }
-          
+
           .navitem-toggle-label {
+            display: flex;
+            align-items: center;
+            height: 100%;
+            &:hover .item-name {
+              font-weight: 900;
+            }
             &::before {
               display: none;
             }
@@ -334,6 +357,29 @@ export default {
         .nav-link-wrapper {
           display: none;
         }
+      }
+    }
+
+    .contact-us {
+      .icon-wrapper {
+        display: none;
+      }
+      p {
+        color: $font_color;
+        font-size: 8px;
+        &:nth-child(2) {
+          font-size: 18px;
+          font-weight: 700;
+        }
+      }
+      .contact-btn {
+        width: 127px;
+        background-color: $theme_color;
+        border-radius: 20px;
+        padding: 10px;
+        border: transparent;
+        font-weight: 600;
+        font-size: .9rem;
       }
     }
   }

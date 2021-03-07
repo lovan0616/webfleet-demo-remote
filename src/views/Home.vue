@@ -67,7 +67,9 @@
       <FormAnchor class="d-none d-sm-block" />
     </section>
 
-    <section id="sns-section"></section>
+    <section id="sns-section">
+      <SNS />
+    </section>
 
     <section id="footer-section"></section>
   </div>
@@ -80,6 +82,7 @@ import Case from "../components/Case";
 import Form from "../components/Form";
 import FormAnchor from "../components/FormAnchor";
 import Header from "../components/Header";
+import SNS from "../components/SNS"
 export default {
   name: "Home",
   components: {
@@ -88,7 +91,8 @@ export default {
     Case,
     Form,
     FormAnchor,
-    Header
+    Header,
+    SNS
   },
   data() {
     return {
