@@ -49,17 +49,17 @@ export default {
     return {
       cases: [
         {
-          image: "https://picsum.photos/1200/628",
+          image: "https://www.pointit.com/wp-content/uploads/2014/05/Grid.png",
           hightlight: "Lorem ipsum dolor sit amet, adipiscing elit.",
           customer: "Lorem ipsum dolor sit amet"
         },
         {
-          image: "https://picsum.photos/1200/628",
+          image: "https://www.pointit.com/wp-content/uploads/2014/05/Grid.png",
           hightlight: "Lorem ipsum dolor sit amet, adipiscing elit.",
           customer: "Lorem ipsum dolor sit amet"
         },
         {
-          image: "https://picsum.photos/1200/628",
+          image: "https://www.pointit.com/wp-content/uploads/2014/05/Grid.png",
           hightlight: "Lorem ipsum dolor sit amet, adipiscing elit.",
           customer: "Lorem ipsum dolor sit amet"
         }

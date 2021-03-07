@@ -23,43 +23,43 @@ export default {
     return {
       features: [
         {
-          image: "https://picsum.photos/1200/628",
+          image: "https://www.pointit.com/wp-content/uploads/2014/05/Grid.png",
           title: "Lorem ipsum dolor sit amet",
           description:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. "
         },
         {
-          image: "https://picsum.photos/1200/628",
+          image: "https://www.pointit.com/wp-content/uploads/2014/05/Grid.png",
           title: "Lorem ipsum dolor sit amet",
           description:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. "
         },
         {
-          image: "https://picsum.photos/1200/628",
+          image: "https://www.pointit.com/wp-content/uploads/2014/05/Grid.png",
           title: "Lorem ipsum dolor sit amet",
           description:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. "
         },
         {
-          image: "https://picsum.photos/1200/628",
+          image: "https://www.pointit.com/wp-content/uploads/2014/05/Grid.png",
           title: "Lorem ipsum dolor sit amet",
           description:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. "
         },
         {
-          image: "https://picsum.photos/1200/628",
+          image: "https://www.pointit.com/wp-content/uploads/2014/05/Grid.png",
           title: "Lorem ipsum dolor sit amet",
           description:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sodales venenatis urna eu pulvinar. Nulla sit amet rutrum tellus."
         },
         {
-          image: "https://picsum.photos/1200/628",
+          image: "https://www.pointit.com/wp-content/uploads/2014/05/Grid.png",
           title: "Lorem ipsum dolor sit amet",
           description:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. "
         },
         {
-          image: "https://picsum.photos/1200/628",
+          image: "https://www.pointit.com/wp-content/uploads/2014/05/Grid.png",
           title: "Lorem ipsum dolor sit amet",
           description:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
