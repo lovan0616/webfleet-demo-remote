@@ -3,7 +3,14 @@
     <header id="hedaer-section">
       <Header />
     </header>
-    
+
+    <section id="news-section">
+      <div class="news">
+        COVID-19 Updates.
+        <span class="highlight">Learn more &#62;</span>
+      </div>
+    </section>
+
     <section id="main-section">
       <div class="main-background">
         <div class="cus-container d-flex py-5">
@@ -71,8 +78,8 @@ import Benefit from "../components/Benefit";
 import Feature from "../components/Feature";
 import Case from "../components/Case";
 import Form from "../components/Form";
-import FormAnchor from "../components/FormAnchor"
-import Header from "../components/Header"
+import FormAnchor from "../components/FormAnchor";
+import Header from "../components/Header";
 export default {
   name: "Home",
   components: {
@@ -101,11 +108,27 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+#news-section {
+  padding-top: 80px;
+  .news {
+    width: 100%;
+    height: 31.5px;
+    background-color: $font_color;
+    color: #ffffff;
+    line-height: 31.5px;
+    padding-left: #{"min(4vw, 40px)"};
+    .highlight {
+      color: $theme_color;
+      font-weight: 600;
+    }
+  }
+}
+
 .main-background {
   width: 100%;
   background-image: linear-gradient(
       rgba(255, 255, 255, 0.85),
-      rgba(255, 255, 255, 0.85),
+      rgba(255, 255, 255, 0.85)
     ),
     url("https://pwbgis.kcg.gov.tw/construction/Images/24_00-1.jpg");
   background-repeat: no-repeat;
@@ -137,7 +160,7 @@ export default {
       }
     }
     .trial-btn {
-      @include btnStyle(60%)
+      @include btnStyle(60%);
     }
   }
 }
@@ -174,11 +197,13 @@ export default {
 
 @media (min-width: 576px), print {
   .main-background {
-    background-image: linear-gradient(to right,
-      rgba(255, 255, 255, 1),
-      rgba(255, 255, 255, 0.95),
-      rgba(255, 255, 255, 0)
-    ), url("https://pwbgis.kcg.gov.tw/construction/Images/24_00-1.jpg");
+    background-image: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 1),
+        rgba(255, 255, 255, 0.95),
+        rgba(255, 255, 255, 0)
+      ),
+      url("https://pwbgis.kcg.gov.tw/construction/Images/24_00-1.jpg");
   }
 
   .benefit-title,

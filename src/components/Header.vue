@@ -32,6 +32,12 @@
         </li>
       </ul>
     </nav>
+
+    <div class="contact-us">
+      <div class="icon-wrapper">
+        <font-awesome-icon :icon="['fas' , 'phone' ]" />
+      </div>
+    </div>
   </div>
 </template>
 
@@ -240,6 +246,25 @@ export default {
           }
         }
       }
+    }
+  }
+
+  .contact-us {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 4.5%;
+    display: flex;
+    align-items: center;
+    .icon-wrapper {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: $theme_color;
+      font-size: 1.2rem;
+      text-align: center;
+      line-height: 40px;
+      transform: scaleX(-1);
     }
   }
 }
