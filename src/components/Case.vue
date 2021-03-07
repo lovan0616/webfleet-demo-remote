@@ -71,7 +71,6 @@ export default {
 
 <style lang="scss" scoped>
 .carousel {
-  border: 4px solid green;
   width: 100%;
   .carousel-indicators {
     li {
