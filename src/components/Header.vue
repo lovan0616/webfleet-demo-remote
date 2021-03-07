@@ -44,7 +44,7 @@
       <div class="icon-wrapper">
         <font-awesome-icon :icon="['fas' , 'phone' ]" />
       </div>
-      <div class="number-wrapper d-flex">
+      <div class="number-wrapper">
         <div class="d-flex flex-column align-items-end">
           <p>Call Sales</p>
           <p>0208 822 305</p>
@@ -286,6 +286,9 @@ export default {
       line-height: 40px;
       transform: scaleX(-1);
     }
+    .number-wrapper {
+      display: none;
+    }
   }
 }
 
@@ -364,22 +367,25 @@ export default {
       .icon-wrapper {
         display: none;
       }
-      p {
-        color: $font_color;
-        font-size: 8px;
-        &:nth-child(2) {
-          font-size: 18px;
-          font-weight: 700;
+      .number-wrapper {
+        display: flex;
+        p {
+          color: $font_color;
+          font-size: 8px;
+          &:nth-child(2) {
+            font-size: 18px;
+            font-weight: 700;
+          }
         }
-      }
-      .contact-btn {
-        width: 127px;
-        background-color: $theme_color;
-        border-radius: 20px;
-        padding: 10px;
-        border: transparent;
-        font-weight: 600;
-        font-size: .9rem;
+        .contact-btn {
+          width: 127px;
+          background-color: $theme_color;
+          border-radius: 20px;
+          padding: 10px;
+          border: transparent;
+          font-weight: 600;
+          font-size: 0.9rem;
+        }
       }
     }
   }

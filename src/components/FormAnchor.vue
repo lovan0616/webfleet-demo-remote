@@ -36,7 +36,7 @@
       font-size: 1.25rem;
     }
     a {
-      @include btnStyle(315px);
+      @include btnStyle(315px, 20px, 30px);
       text-decoration: none;
       color: inherit;
       text-align: center;

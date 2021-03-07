@@ -84,7 +84,7 @@ form {
     }
   }
   button {
-   @include btnStyle(220px)
+   @include btnStyle(220px, 20px, 30px)
   }
   .policy-wrapper {
     .icon-wrapper {

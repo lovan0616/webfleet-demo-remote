@@ -71,7 +71,9 @@
       <SNS />
     </section>
 
-    <section id="footer-section"></section>
+    <section id="footer-section">
+      <Footer />
+    </section>
   </div>
 </template>
 
@@ -82,7 +84,8 @@ import Case from "../components/Case";
 import Form from "../components/Form";
 import FormAnchor from "../components/FormAnchor";
 import Header from "../components/Header";
-import SNS from "../components/SNS"
+import SNS from "../components/SNS";
+import Footer from "../components/Footer"
 export default {
   name: "Home",
   components: {
@@ -92,7 +95,8 @@ export default {
     Form,
     FormAnchor,
     Header,
-    SNS
+    SNS,
+    Footer
   },
   data() {
     return {
@@ -164,7 +168,7 @@ export default {
       }
     }
     .trial-btn {
-      @include btnStyle(60%);
+      @include btnStyle(60%,20px, 30px);
     }
   }
 }
